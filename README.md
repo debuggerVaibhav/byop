@@ -1,55 +1,96 @@
-Pocket Expense Tracker
-📌 Overview
-The Pocket Expense Tracker is a Python-based utility designed to solve the common problem of "invisible spending." In a world of digital micro-transactions, it’s easy to lose track of small daily costs. This tool provides a centralized, terminal-based interface to log, categorize, and analyze expenditures in real-time.
+# Study Time Predictor (AIML Project)
 
-🛠 The Problem & Solution
-The Problem: Many existing expense apps are over-complicated, require account sign-ups, or lack privacy. Users often need a "no-friction" way to quickly log a cost without leaving their desktop environment.
+## Overview
+This project is a simple machine learning application that predicts how many hours a student should study daily based on different factors.
 
-The Solution: A lightweight, local Python application that prioritizes speed and data integrity through robust error handling and a clean Command Line Interface (CLI).
+It is developed as part of a first-year AIML course project.
 
-✨ Features
-Dynamic Logging: Add expenses with descriptions and timestamps.
+---
 
-Data Validation: Built-in safeguards to prevent crashes from invalid inputs (e.g., entering text where a price is expected).
+## Problem Statement
+Many students struggle to decide how much time they should spend studying before exams. This project aims to provide a basic solution by predicting study hours using simple input values.
 
-Instant Analytics: Live calculation of total spending to help users stay within budget.
+---
 
-Formatted Output: Clean, tabular view of historical data for easy review.
+## Objective
+To build a machine learning model that recommends study hours based on:
+- Number of subjects
+- Difficulty level
+- Days left for exam
 
-💻 Technologies Used
-Language: Python 3.x
+---
 
-Core Modules: * datetime: For automated entry logging.
+## Technologies Used
+- Python  
+- Pandas  
+- Scikit-learn  
 
-sys/os: For terminal navigation and clean exit handling.
+---
 
-Version Control: Git/GitHub (Reflecting an iterative development process).
+## How It Works
+1. A small dataset is created manually.
+2. A Linear Regression model is trained on the dataset.
+3. The user enters input values.
+4. The model predicts recommended study hours.
 
-🚀 Installation & Setup
-Clone the Repository:
+---
 
-Bash
-git clone https://github.com/your-username/Vityarthi-Project.git
-Navigate to Directory:
+## How to Run the Project
 
-Bash
-cd Vityarthi-Project
-Run the Application:
+1. Install required libraries:
+```
+pip install pandas scikit-learn
+```
 
-Bash
-python expense_tracker.py
-🧪 Testing the Program
-To ensure the application is running correctly, follow these test cases:
+2. Run the program:
+```
+python main.py
+```
 
-Standard Entry: Choose 1, enter "Coffee" and 5.50. Verify it appears in the list.
+3. Enter inputs when prompted:
+- Number of subjects  
+- Difficulty (1 = Easy, 2 = Medium, 3 = Hard)  
+- Days left  
 
-Input Resilience: Try entering "Free" as an amount. The program should catch the error and prompt for a number.
+4. The program will display predicted study hours.
 
-Calculation Check: Add three items and select 3 to ensure the sum matches your manual calculation.
+---
 
-Empty State: View the list before adding any items to see the "No expenses recorded" handling.
+## Example
 
-📈 Development Roadmap (Key Decisions)
-Decision 1: Chose a List-of-Dictionaries structure to allow for easy expansion (e.g., adding "Category" tags later).
+Input:
+Subjects: 3  
+Difficulty: 2  
+Days Left: 7  
 
-Decision 2: Implemented a while True loop for the menu to ensure a seamless user experience until an explicit exit command is given.
+Output:
+Recommended Study Hours: 3.5 (approx)
+
+---
+
+## Limitations
+- Dataset is very small  
+- Predictions may not be highly accurate  
+- Model is basic and for learning purpose only  
+
+---
+
+## Future Improvements
+- Use larger dataset  
+- Add graphical interface  
+- Improve accuracy with better models  
+
+---
+
+## Learning Outcome
+Through this project, I learned:
+- Basics of Machine Learning  
+- How to use Linear Regression  
+- How to handle simple datasets  
+- How to structure a project  
+
+---
+
+## Author
+First Year CSE CORE Student- VAIBHAV SINGH (25BCE10318)
+
